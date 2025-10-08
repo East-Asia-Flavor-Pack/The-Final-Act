@@ -12,6 +12,10 @@ je_TFA_scoreboard = {
 			id = TFA.1  # 세력 선택 이벤트
 			popup = yes
 		}
+
+		c:KOR = {
+			set_variable = no_heirs
+		}
 	}
 
 	scripted_progress_bar = TFA_old_regime_progress_bar
@@ -24,7 +28,7 @@ je_TFA_scoreboard = {
 	on_complete = {
 	}
 
-	# scripted_button = TFA_tutorial_button
+	scripted_button = TFA_tutorial_button
 
 	status_desc = { # 자기가 선택한 영역만 표시
 		first_valid = {
