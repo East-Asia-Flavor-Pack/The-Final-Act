@@ -1,0 +1,36 @@
+scoreboard_je_title_custom_loc = {
+	type = country
+	text = {
+		trigger = {
+			is_new_regime = yes
+		}
+		localization_key = scoreboard_title_new
+	}
+	text = {
+		trigger = {
+			is_old_regime = yes
+		}
+		localization_key = scoreboard_title_old
+	}
+	text = {
+		localization_key = scoreboard_title_default
+	}
+}
+scoreboard_je_reason_custom_loc = {
+	type = country
+	text = {
+		trigger = {
+			is_new_regime = yes
+		}
+		localization_key = scoreboard_desc_new
+	}
+	text = {
+		trigger = {
+			is_old_regime = yes
+		}
+		localization_key = scoreboard_desc_old
+	}
+	text = {
+		localization_key = scoreboard_desc_default
+	}
+}

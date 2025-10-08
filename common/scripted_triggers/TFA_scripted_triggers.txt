@@ -1,0 +1,7 @@
+is_new_regime = {
+	has_global_variable = player_choose_new_regime
+}
+
+is_old_regime = {
+	has_global_variable = player_choose_old_regime
+}

@@ -1,0 +1,23 @@
+﻿
+TFA_old_regime_progress_bar = { # 구체제 프로그레스바
+	name = "TFA_old_regime_progress_bar"
+	desc = "TFA_old_regime_progress_bar_desc"
+
+	default_green = yes
+
+	start_value = 25
+	min_value = 0
+	max_value = 100
+}
+
+ TFA_new_regime_progress_bar = { 신체제 프로그레스바
+	name = "TFA_new_regime_progress_bar"
+	desc = "TFA_new_regime_progress_bar_desc"
+
+	default = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+
+}

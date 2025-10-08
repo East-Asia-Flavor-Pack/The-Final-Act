@@ -1,0 +1,23 @@
+add_new_regime_progress = {
+	if = {
+		limit = {
+			has_journal_entry = je_TFA_scoreboard
+		}
+		je:je_TFA_scoreboard ?= {
+			add_progress = { value = $VALUE$ name = TFA_new_regime_progress_bar }
+		}
+	}
+	custom_tooltip = add_new_regime_progress_tt
+}
+
+add_old_regime_progress = {
+	if = {
+		limit = {
+			has_journal_entry = je_TFA_scoreboard
+		}
+		je:je_TFA_scoreboard ?= {
+			add_progress = { value = $VALUE$ name = TFA_old_regime_progress_bar }
+		}
+	}
+	custom_tooltip = add_old_regime_progress_tt
+}

@@ -1,0 +1,130 @@
+﻿namespace = TFA
+
+TFA.1 = { #Heir falls in love with unbecomingly unacceptable pop. The horror!
+	type = country_event
+	placement = ROOT
+
+	title = TFA.1.t
+	desc = TFA.1.d
+	flavor = TFA.1.f
+
+	
+	 gui_window = event_window_2char
+
+
+	left_icon = c:KOR.ruler
+	right_icon = scope:gaehwa_leader
+
+
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/2Characters"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		ig:ig_intelligentsia ?= {
+			leader = {
+				save_scope_as = gaehwa_leader
+			}
+		}
+	}
+
+	option = {
+		default_option = yes
+		name = TFA.1.a
+		custom_tooltip = {
+			text = old_regime_start_tt
+			set_global_variable = player_choose_old_regime
+			trigger_event = {
+				id = TFA.2 #구체제 시작이벤트
+				days = 10
+				popup = yes
+			}
+		}
+		add_old_regime_progress = { VALUE = 10 }
+	}
+
+	option = {
+		name = TFA.1.b
+		custom_tooltip = {
+			text = new_regime_start_tt
+			set_global_variable = player_choose_new_regime
+			trigger_event = {
+				id = TFA.3 #신체제 시작이벤트
+				days = 52
+				popup = yes
+			}
+		}
+		add_new_regime_progress = { VALUE = 20 }
+	}
+}
+
+TFA.2 = { # The Empire from Down Under
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_emu.dds"
+
+	title = TFA.2.t
+	desc = TFA.2.d
+	flavor = TFA.2.f
+
+	gui_window = event_window_widescreen_classic
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	trigger = {
+		# triggered by je_grefm_aus_megali_idea
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = TFA.2.a
+		default_option = yes
+	}
+
+}
+
+TFA.3 = { # The Empire from Down Under
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_emu.dds"
+
+	title = TFA.3.t
+	desc = TFA.3.d
+	flavor = TFA.3.f
+
+	gui_window = event_window_widescreen_classic
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	trigger = {
+		# triggered by je_grefm_aus_megali_idea
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = TFA.3.a
+		default_option = yes
+	}
+
+}

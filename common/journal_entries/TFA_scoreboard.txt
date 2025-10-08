@@ -1,0 +1,137 @@
+je_TFA_scoreboard = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	group = je_group_TFA
+
+	is_shown_in_lobby = {
+		c:KOR = THIS
+	}
+
+	immediate = {
+		trigger_event = {
+			id = TFA.1  # 세력 선택 이벤트
+			popup = yes
+		}
+	}
+
+	scripted_progress_bar = TFA_old_regime_progress_bar
+	scripted_progress_bar = TFA_new_regime_progress_bar
+
+	complete = {
+		has_global_variable = TFA_end_gvar
+	}
+
+	on_complete = {
+	}
+
+	# scripted_button = TFA_tutorial_button
+
+	status_desc = { # 자기가 선택한 영역만 표시
+		first_valid = {
+			triggered_desc = { # 유저가 구체제일때 구체제가 낮은 경우 표시. 
+				desc = TFA_old_regime_low
+				trigger = {
+					is_old_regime = yes
+					"scripted_bar_progress(TFA_old_regime_progress_bar)" <= 50
+				}
+			}
+			triggered_desc = { # 유저가 구체제일때 구체제가 중간일 경우 표시. 
+				desc = TFA_old_regime_medium
+				trigger = {
+					is_old_regime = yes
+					AND = {
+						"scripted_bar_progress(TFA_old_regime_progress_bar)" > 50
+						"scripted_bar_progress(TFA_old_regime_progress_bar)" <= 75
+					}
+				}
+			}
+			triggered_desc = { # 유저가 구체제일때 구체제가 높은 경우 표시. 
+				desc = TFA_old_regime_high
+				trigger = {
+					is_old_regime = yes
+					AND = {
+						"scripted_bar_progress(TFA_old_regime_progress_bar)" > 75
+					}
+				}
+			}
+			triggered_desc = { # 유저가 신체제일때 신체제가 낮은 경우 표시. 
+				desc = TFA_new_regime_low
+				trigger = {
+					is_new_regime = yes
+					"scripted_bar_progress(TFA_new_regime_progress_bar)" <= 50
+				}
+			}
+			triggered_desc = { # 유저가 신체제일때 신체제가 중간일 경우 표시. 
+				desc = TFA_new_regime_medium
+				trigger = {
+					is_new_regime = yes
+					AND = {
+						"scripted_bar_progress(TFA_new_regime_progress_bar)" > 50
+						"scripted_bar_progress(TFA_new_regime_progress_bar)" <= 75
+					}
+				}
+			}
+			triggered_desc = { # 유저가 신체제일때 신체제가 높은 경우 표시. 
+				desc = TFA_new_regime_high
+				trigger = {
+					is_new_regime = yes
+					AND = {
+						"scripted_bar_progress(TFA_new_regime_progress_bar)" > 75
+					}
+				}
+			}
+			triggered_desc = { # 구체제 경합
+				desc = TFA_old_regime_power_struggle_tie
+				trigger = {
+					AND = {
+						is_old_regime = yes
+						scope:journal_entry = {
+							"scripted_bar_progress(TFA_new_regime_progress_bar)" > "75"
+							"scripted_bar_progress(TFA_old_regime_progress_bar)" > "75"
+						}
+					}
+				}
+			}
+			triggered_desc = { # 신체제 경합
+				desc = TFA_new_regime_power_struggle_tie
+				trigger = {
+					AND = {
+						is_new_regime = yes
+						scope:journal_entry = {
+							"scripted_bar_progress(TFA_new_regime_progress_bar)" > "75"
+							"scripted_bar_progress(TFA_old_regime_progress_bar)" > "75"
+						}
+					}
+				}
+			}
+			triggered_desc = { # 풀백
+				desc = TFA_scoreboard_fallback
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	on_weekly_pulse = {
+	}
+
+	on_monthly_pulse = {
+	}
+
+	fail = {
+	}
+
+	on_fail = {
+	}
+
+	invalid = {
+	}
+
+	on_invalid = {
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}
