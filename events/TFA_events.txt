@@ -128,3 +128,34 @@ TFA.3 = { # The Empire from Down Under
 	}
 
 }
+
+TFA.4 = { # The Empire from Down Under
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_emu.dds"
+
+	title = TFA.4.t
+	desc = TFA.4.d
+	flavor = TFA.4.f
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+		# triggered by je_grefm_aus_megali_idea
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = TFA.4.a
+		default_option = yes
+	}
+
+}

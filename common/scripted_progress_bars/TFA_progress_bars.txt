@@ -21,3 +21,15 @@ TFA_old_regime_progress_bar = { # 구체제 프로그레스바
 	max_value = 100
 
 }
+
+TFA_minran_progress_bar = {
+	name = "TFA_minran_progress_bar"
+	desc = "TFA_minran_progress_bar_desc"
+
+	default_red = yes
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+
+}

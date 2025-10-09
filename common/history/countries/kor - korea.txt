@@ -20,6 +20,10 @@
 		
 		add_journal_entry = { type = je_TFA_scoreboard }
 
+		add_journal_entry = {
+			type = je_TFA_samjeong
+		}
+		
 		ig:ig_landowners ?= { 
 			add_ruling_interest_group = yes
 		}

@@ -1,0 +1,61 @@
+je_TFA_samjeong = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	is_shown_in_lobby = {
+		c:KOR = THIS
+	}
+
+	group = je_group_TFA
+
+	scripted_progress_bar = TFA_minran_progress_bar
+
+	complete = {
+		OR = {
+			trigger_if = {
+				limit = {
+					NOT = {
+						custom_tooltip = {
+							text = no_minran_occur_tt
+							has_variable = minran_occur_var
+						}
+					}
+				}
+				custom_tooltip = {
+					text = no_bulman_tt
+					
+					scope:journal_entry = {
+						"scripted_bar_progress(TFA_minran_progress_bar)" = 0
+					}
+				}
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = no_bulman_tt
+					
+					scope:journal_entry = {
+						"scripted_bar_progress(TFA_minran_progress_bar)" = 0
+					}
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = {
+			text = samjeong_clear_tt
+		}
+		trigger_event = { id = TFA.4 }
+	}
+	
+	event_outcome_completed_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = event_effects_TFA.4_tt
+			}
+		}
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}
