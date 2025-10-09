@@ -1,0 +1,139 @@
+namespace = TFA_tutorial
+
+
+TFA_tutorial.1 = { #튜토리얼 1
+    type = country_event
+    placement = root
+    title = TFA_tutorial.1.t
+    desc = TFA_tutorial.1.d
+    flavor = TFA_tutorial.1.f
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    event_image = {
+        video = "votp_monarch_holding_court"
+    }
+   
+    immediate = {}
+    trigger = {}
+   
+    option = { #다음 페이지로
+        default_option = yes
+        name = TFA_tutorial.1.a
+        trigger_event = { id = TFA_tutorial.2 popup = yes }
+    }
+    option = { #닫기
+        name = TFA_tutorial.1.b
+    }
+}
+
+TFA_tutorial.2 = { #튜토리얼 2
+    type = country_event
+    placement = root
+    title = TFA_tutorial.2.t
+    desc = TFA_tutorial.2.d
+    flavor = TFA_tutorial.2.f
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    event_image = {
+        video = "votp_monarch_holding_court"
+
+   
+    immediate = {}
+    trigger = {}
+    
+    option = { #다음 페이지로
+        default_option = yes
+        name = TFA_tutorial.2.a
+        trigger_event = { id = TFA_tutorial.3 popup = yes }
+    }
+    option = { #이전 페이지로
+        name = TFA_tutorial.2.b
+        trigger_event = { id = TFA_tutorial.1 popup = yes }
+    }
+    option = { #닫기
+        name = TFA_tutorial.2.c
+    }
+}
+
+TFA_tutorial.3 = { #튜토리얼 3
+    type = country_event
+    placement = root
+    title = TFA_tutorial.3.t
+    desc = TFA_tutorial.3.d
+    flavor = TFA_tutorial.3.f
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    event_image = {
+        video = "votp_monarch_holding_court"
+
+   
+    immediate = {}
+    trigger = {}
+   
+    option = { #다음 페이지로
+        default_option = yes
+        name = TFA_tutorial.3.a
+        trigger_event = { id = TFA_tutorial.4 popup = yes }
+    }
+    option = { #이전 페이지로
+        name = TFA_tutorial.3.b
+        trigger_event = { id = TFA_tutorial.2 popup = yes }
+    }
+    option = { #닫기
+        name = TFA_tutorial.3.c
+    }
+}
+
+TFA_tutorial.4 = { #튜토리얼 4
+    type = country_event
+    placement = root
+    title = TFA_tutorial.4.t
+    desc = TFA_tutorial.4.d
+    flavor = TFA_tutorial.4.f
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    event_image = {
+        video = "votp_monarch_holding_court"
+
+   
+    immediate = {}
+    trigger = {}
+   
+    option = { #다음 페이지로
+        default_option = yes
+        name = TFA_tutorial.4.a
+        trigger_event = { id = TFA_tutorial.5 popup = yes }
+    }
+    option = { #이전 페이지로
+        name = TFA_tutorial.4.b
+        trigger_event = { id = TFA_tutorial.3 popup = yes }
+    }
+    option = { #닫기
+        name = TFA_tutorial.4.c
+    }
+}
+
+TFA_tutorial.5 = { #튜토리얼 5
+    type = country_event
+    placement = root
+    title = TFA_tutorial.5.t
+    desc = TFA_tutorial.5.d
+    flavor = TFA_tutorial.5.f
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    event_image = {
+        video = "votp_monarch_holding_court"
+
+   
+    immediate = {}
+    trigger = {}
+   
+    option = { #이전 페이지로
+        name = TFA_tutorial.5.a
+        trigger_event = { id = TFA_tutorial.4 popup = yes }
+    }
+    option = { #닫기
+        default_option = yes
+        name = TFA_tutorial.5.b
+    }
+}
