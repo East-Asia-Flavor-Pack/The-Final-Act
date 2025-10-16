@@ -1,0 +1,49 @@
+je_TFA_bukbeol = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	is_shown_in_lobby = {
+		c:KOR = THIS
+	}
+
+	immediate = {
+		add_modifier = {
+			name = TFA_long_peace_modi
+			months = -1
+		}
+	}
+
+	group = je_group_TFA
+
+	scripted_progress_bar = TFA_bukbeol_progress_bar
+	
+	scripted_button = TFA_bukbeol_start_button
+	scripted_button = TFA_delete_gunyeok_button
+	scripted_button = TFA_bukbeol_samjeondobi_button
+	scripted_button = TFA_deny_jogong_button
+	scripted_button = TFA_start_dokrip_war_button
+	
+	complete = {
+		c:KOR = {
+			is_subject = no
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = {
+			text = TFA_peace_agreement_tt
+		}
+	}
+
+	on_weekly_pulse = {
+		events = {
+			TFA.9 #아편전쟁 이벤트
+			TFA.14 #60 이벤트
+			TFA.15 #90 이벤트
+		}
+	}
+
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

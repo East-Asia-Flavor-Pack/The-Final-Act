@@ -7,21 +7,28 @@
 		add_technology_researched = sericulture
 
 		activate_law = law_type:law_monarchy
-		activate_law = law_type:law_autocracy 
-		activate_law = law_type:law_serfdom
-		activate_law = law_type:law_land_based_taxation
-		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_TFA_sedo
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_TFA_samse
+		activate_law = law_type:law_TFA_gwageo
 		activate_law = law_type:law_subjecthood
 		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_isolationism
-		activate_law = law_type:law_censorship
+		activate_law = law_type:law_TFA_sangso
+		activate_law = law_type:law_TFA_hyanggyo
+		activate_law = law_type:law_TFA_gunyeok
 
-		set_tax_level = low
+
+		set_tax_level = very_high
 		
 		add_journal_entry = { type = je_TFA_scoreboard }
 
 		add_journal_entry = {
 			type = je_TFA_samjeong
+		}
+		
+		add_journal_entry = {
+			type = je_TFA_bukbeol
 		}
 		
 		ig:ig_landowners ?= { 

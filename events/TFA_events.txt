@@ -63,10 +63,10 @@ TFA.1 = { #Heir falls in love with unbecomingly unacceptable pop. The horror!
 	}
 }
 
-TFA.2 = { # The Empire from Down Under
+TFA.2 = { 
 	type = country_event
 	placement = root
-	icon = "gfx/interface/icons/event_icons/event_emu.dds"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	title = TFA.2.t
 	desc = TFA.2.d
@@ -83,7 +83,6 @@ TFA.2 = { # The Empire from Down Under
 	duration = 3
 
 	trigger = {
-		# triggered by je_grefm_aus_megali_idea
 	}
 
 	immediate = {
@@ -96,10 +95,10 @@ TFA.2 = { # The Empire from Down Under
 
 }
 
-TFA.3 = { # The Empire from Down Under
+TFA.3 = {
 	type = country_event
 	placement = root
-	icon = "gfx/interface/icons/event_icons/event_emu.dds"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	title = TFA.3.t
 	desc = TFA.3.d
@@ -116,7 +115,6 @@ TFA.3 = { # The Empire from Down Under
 	duration = 3
 
 	trigger = {
-		# triggered by je_grefm_aus_megali_idea
 	}
 
 	immediate = {
@@ -129,10 +127,10 @@ TFA.3 = { # The Empire from Down Under
 
 }
 
-TFA.4 = { # The Empire from Down Under
+TFA.4 = { 
 	type = country_event
 	placement = root
-	icon = "gfx/interface/icons/event_icons/event_emu.dds"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	title = TFA.4.t
 	desc = TFA.4.d
@@ -147,7 +145,6 @@ TFA.4 = { # The Empire from Down Under
 	duration = 4
 
 	trigger = {
-		# triggered by je_grefm_aus_megali_idea
 	}
 
 	immediate = {
@@ -158,4 +155,430 @@ TFA.4 = { # The Empire from Down Under
 		default_option = yes
 	}
 
+}
+
+
+TFA.9 = { 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	title = TFA.9.t
+	desc = TFA.9.d
+	flavor = TFA.9.f
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+		OR = {
+			c:CHI = {
+				has_variable = lost_opium_wars
+			}
+			c:CHI = {
+				NOT = { has_variable = opium_wars_target }
+				has_modifier = opium_wars_addiction_modifier
+			}
+		}
+	}
+
+	immediate = {
+		add_liberty_desire = 5
+		set_variable = qing_opium_lost_var
+	}
+
+	option = {
+		name = TFA.9.a
+		default_option = yes
+	}
+
+}
+
+TFA.10 = { 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = TFA.10.t
+				trigger = {
+					is_new_regime = yes 
+				}
+			}
+			triggered_desc = {
+				desc = TFA.10.t2
+				trigger = {
+					is_old_regime = yes
+				}
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = TFA.10.d
+				trigger = {
+					is_new_regime = yes 
+				}
+			}
+			triggered_desc = {
+				desc = TFA.10.d2
+				trigger = {
+					is_old_regime = yes
+				}
+			}
+		}
+	}
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = TFA.10.f
+				trigger = {
+					is_new_regime = yes 
+				}
+			}
+			triggered_desc = {
+				desc = TFA.10.f2
+				trigger = {
+					is_old_regime = yes
+				}
+			}
+		}
+	}
+
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = TFA.10.a
+		default_option = yes
+		set_variable = TFA_bukbeol_start_event_var
+		trigger = {
+			is_new_regime = yes
+		}
+		add_new_regime_progress = { VALUE = 10 }
+	}
+
+	option = {
+		name = TFA.10.b
+		default_option = yes
+		set_variable = TFA_bukbeol_start_event_var
+		trigger = {
+			is_old_regime = yes
+		}
+		add_old_regime_progress = { VALUE = 10 }
+	}
+
+}
+
+TFA.11 = { 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = TFA.11.t
+				trigger = {
+					is_new_regime = yes 
+				}
+			}
+			triggered_desc = {
+				desc = TFA.11.t2
+				trigger = {
+					is_old_regime = yes
+				}
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = TFA.11.d
+				trigger = {
+					is_new_regime = yes 
+				}
+			}
+			triggered_desc = {
+				desc = TFA.11.d2
+				trigger = {
+					is_old_regime = yes
+				}
+			}
+		}
+	}
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = TFA.11.f
+				trigger = {
+					is_new_regime = yes 
+				}
+			}
+			triggered_desc = {
+				desc = TFA.11.f2
+				trigger = {
+					is_old_regime = yes
+				}
+			}
+		}
+	}
+
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = TFA.11.a
+		default_option = yes
+		custom_tooltip = {
+			text = TFA_gunyeok_char_interaction_tt
+			set_variable = TFA_gunyeok_char_interaction_var
+		}
+		trigger = {
+			is_new_regime = yes
+		}
+		
+	}
+
+	option = {
+		name = TFA.11.b
+		default_option = yes
+		custom_tooltip = {
+			text = TFA_gunyeok_char_interaction_tt
+			set_variable = TFA_gunyeok_char_interaction_var
+		}
+		trigger = {
+			is_old_regime = yes
+		}
+	}
+
+}
+
+TFA.12 = { 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = TFA.12.t
+	desc = TFA.12.d
+	flavor = TFA.12.f
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = { #부셔버림
+		name = TFA.12.a
+		default_option = yes
+		add_liberty_desire = 20
+		change_relations = {
+			country = c:CHI
+			value = -30
+		}
+	}
+
+	option = { #쓸데가 있겠지. 보관
+		name = TFA.12.b
+		default_option = yes
+		add_liberty_desire = 20
+		change_relations = {
+			country = c:CHI
+			value = -15
+		}
+		set_variable = samjeondobi_bogwan_var
+	}
+}
+
+
+TFA.13 = { 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = TFA.13.t
+	desc = TFA.13.d
+	flavor = TFA.13.f
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = { 
+		name = TFA.13.a
+		default_option = yes
+		add_liberty_desire = 20
+		change_relations = {
+			country = c:CHI
+			value = -30
+		}
+	}
+}
+
+
+TFA.13 = { 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	title = TFA.13.t
+	desc = TFA.13.d
+	flavor = TFA.13.f
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = { 
+		name = TFA.13.a
+		default_option = yes
+		add_liberty_desire = 20
+		change_relations = {
+			country = c:CHI
+			value = -30
+		}
+	}
+}
+
+
+TFA.14 = { 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = TFA.14.t
+	desc = TFA.14.d
+	flavor = TFA.14.f
+
+		cooldown = { days = never_fire_again_modifier_time }
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+		je:je_TFA_bukbeol = {
+			"scripted_bar_progress(TFA_bukbeol_progress_bar)" >= 60
+		}
+
+	}
+
+	immediate = {
+	}
+
+	option = { 
+		name = TFA.14.a
+		default_option = yes
+		remove_modifier = TFA_long_peace_modi
+		add_modifier = {
+			name = TFA_prepare_war_modi
+			months = 60
+		}
+		NOT = { has_law_or_variant = law_type:law_peasant_levies }
+	}
+}
+
+TFA.15 = { 
+	type = country_event
+	placement = root
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { days = never_fire_again_modifier_time }
+
+	title = TFA.15.t
+	desc = TFA.15.d
+	flavor = TFA.15.f
+
+	event_image = {
+		video = "votp_monarch_holding_court"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 4
+
+	trigger = {
+		je:je_TFA_bukbeol = {
+			"scripted_bar_progress(TFA_bukbeol_progress_bar)" >= 90
+		}
+		NOT = { has_law_or_variant = law_type:law_peasant_levies }
+	}
+
+	immediate = {
+	}
+
+	option = { 
+		name = TFA.15.a
+		default_option = yes
+		add_liberty_desire = 50
+	}
 }

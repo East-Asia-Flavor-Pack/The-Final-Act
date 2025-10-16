@@ -37,9 +37,11 @@ TFA_scoreboard_fallback:0 "아직 개혁은 진행되지 않고있다."
 
 TFA_new_regime_power_struggle_tie:0 "신체제와 구체제가 대립중입니다."
 
-add_old_regime_progress_tt:0 "왕권이 10만큼 증가합니다."
-add_new_regime_progress_tt:0 "개화도가 20만큼 증가합니다."
+TFA_ADD_NEW_REGIME_PROGRESS_EFFECT_POSITIVE:0 "#color:{0.0,1.0,0.0} 개화도#!가 $VALUE|1vb$만큼 #bold 증가#!함"
+TFA_ADD_NEW_REGIME_PROGRESS_EFFECT_NEGATIVE:0 "#color:{0.0,1.0,0.0} 개화도#!가 $VALUE|1vb$만큼 #bold 감소#!함"
 
+TFA_ADD_OLD_REGIME_PROGRESS_EFFECT_POSITIVE:0 "#color:{0.0,0.5,1.0} 왕권#!이 $VALUE|1vb$만큼 #bold 증가#!함"
+TFA_ADD_OLD_REGIME_PROGRESS_EFFECT_NEGATIVE:0 "#color:{0.0,0.5,1.0} 왕권#!이 $VALUE|1vb$만큼 #bold 감소#!함"
 
 
 je_TFA_samjeong:0 "삼정의 문란"
@@ -54,3 +56,72 @@ samjeong_clear_tt:0 "백성들의 불만이 잠재워짐"
 event_effects_TFA.4_tt:0 "효과"
 
 no_bulman_tt:0 " 백성들의 불만이 사그러듦\n\n #V (도전) #!통치중에 민란이 한번도 발생하지 않음"
+
+
+je_TFA_bukbeol:0 "[ROOT.GetCountry.GetCustom('bukbeol_je_title_custom_loc')]"
+je_TFA_bukbeol_reason:0 "[ROOT.GetCountry.GetCustom('bukbeol_je_reason_custom_loc')]"
+
+
+bukbeol_title_default:0 "삼전도의 멍에"
+bukbeol_desc_default:0 "이백여년 전 인조 대왕께서 삼전도에서 청 태종에게 무릎을 꿇으셨습니다.\n\n세 번 절하고 아홉 번 머리를 조아리는 삼배구고두례. 조선 국왕이 오랑캐 황제 앞에 엎드린 그날의 치욕을 우리는 잊지 않았습니다.\n\n이백여 년이 흘렀지만, 그 멍에는 여전히 우리를 짓누르고 있습니다. 청나라는 우리를 속국으로 여기고, 우리는 매년 조공을 바쳐야 합니다.\n\n조선은 이대로 자주라는 말을 잊은채로 영원히 침전하는 것일까요?"
+
+bukbeol_title_new:0 "북벌"
+bukbeol_desc_new:0 "삼전도의 굴욕으로부터 이백여 년. 조선은 끝내 일어섰습니다.\n\n청나라는 이제 쇠락의 길을 걷고 있습니다. 아편전쟁에서 패배하고, 국가는 부패로 썩어가며, 서양 열강에게 땅을 떼어주고 있습니다. 한때 동아시아를 호령하던 제국은 이제 그림자에 불과합니다.\n\n이제 완전한 자주권을 되찾을 때입니다.\n\n청나라와의 종속 관계를 청산하고, 조공과 책봉의 굴레를 벗어던지며, 진정한 독립국으로 우뚝 서야 합니다.\n\n북벌. 그것은 단순한 복수가 아닙니다. 그것은 우리의 존엄을 되찾고, 동아시아의 새로운 질서를 세우며, 이백 년의 치욕을 완전히 씻어내는 것입니다.\n\n조선의 깃발을 북경에 꽂을 날이 멀지 않았습니다."
+
+TFA_bukbeol_start_button:0 "북벌 논의"
+TFA_bukbeol_start_button_desc:0 "청나라가 쇠약해졌음은 이제 천하의 모두가 아는 지고의 사실입니다. 이제는 이백여년전의 복수를 시작해야합니다."
+
+TFA_delete_gunyeok_button:0 "군사제도 정비"
+TFA_delete_gunyeok_button_desc:0 "현재 조선의 군사 제도는 낡다 못해, 그 폐단으로 전백성이 고통받고 있습니다. 군역을 손보고 제대로된 모병 제도를 도입해야 청나라에 대적할 수 있습니다."
+
+TFA_bukbeol_samjeondobi_button:0 "삼전도비 철거"
+TFA_bukbeol_samjeondobi_button_desc:0 "대청황제공덕비... 라는 이름은 쓰지 맙시다. 이제는 눈엣가시인 저 비석을 치워야할 때 입니다."
+
+TFA_deny_jogong_button:0 "조공 거부"
+TFA_deny_jogong_button_desc:0 "우리가 청에 돈을 맡겨놓은적이 있나요?"
+
+TFA_start_dokrip_war_button:0 "북벌 개시"
+TFA_start_dokrip_war_button_desc:0 "압록강을 건너 만주를 뚫고 북경을 친다. 이백여 년 전의 치욕을 되갚을 시간입니다..."
+
+
+TFA_bukbeo_loc:0 "제2차 조선-청 전쟁"
+
+TFA_bukbeol_progressbar_above_100_tt:0 "북벌에 대한 논의가 그 끝에 달함"
+
+TFA_bukbeol_progress_bar:0 "북벌"
+TFA_bukbeol_progress_bar_desc:0 "북벌에 대한 열망"
+
+TFA_bukbeol_over_neutral_tt:0 "청과의 관계가 $relations_neutral$이상에서"
+
+TFA_bukbeol_over_cordial_tt:0 "청과의 관계가 $relations_cordial$이상에서"
+
+TFA_bukbeol_over_amicable_tt:0 "청과의 관계가 $relations_amicable$이상에서"
+
+TFA_bukbeol_over_friendly_tt:0 "청과의 관계가 $relations_friendly$이상에서"
+
+TFA_bukbeol_under_neutral_tt:0 "청과의 관계가 $relations_neutral$미만에서"
+
+TFA_bukbeol_under_poor_tt:0 "청과의 관계가 $relations_poor$미만에서"
+
+TFA_bukbeol_liberty_desire_tt:0 "[concept_liberty_desire]이 65이상에 도달함에서"
+
+TFA_bukbeol_gunyeok_tt:0 "후진적인 모병제도에서"
+
+TFA_bukbeol_no_gunyeok_tt:0 "선진적인 모병제도에서"
+
+TFA_gunyeok_interest_groups_opposing:0 "북벌에 열정적인 군인들의 [concept_clout]에서"
+
+TFA_armed_forces_sway_old_regime:0 "북벌 지지 요구"
+TFA_armed_forces_sway_old_regime_desc:0 "대신에게 북벌을 지지할것을 공개적으로 요구한다."
+
+TFA_armed_forces_sway_new_regime:0 "북벌 지지 제안"
+TFA_armed_forces_sway_new_regime_desc:0 "관리에게 북벌을 지지하도록 설득해야한다."
+
+old_regime_20_tt:0 "왕권이 20 이상이어야함."
+new_regime_20_tt:0 "개화도가 20 이상이어야함."
+
+TFA_peace_agreement_tt:0 "청과의 전후 조약을 체결함"
+
+TFA_long_peace_modi:0 "타성에 젖은 평화"
+TFA_prepare_war_modi:0 "준비된 군대"
+TFA_gisup_modi:0 "기습당함!"

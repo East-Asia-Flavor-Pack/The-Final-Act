@@ -1,3 +1,14 @@
 ﻿l_korean:
 
- law_TFA_gunyeok: "군역"
+law_TFA_hyanggyo:0 "향교 및 서원" 
+law_TFA_hyanggyo_desc:0 "향교와 서원은 지방의 교육과 유교 문화를 담당하는 기관으로, 인재 양성과 지역 사회의 교화에 중요한 역할을 합니다."
+law_TFA_sedo:0 "세도정치"
+law_TFA_sedo_desc:0 "왕실 외척이나 특정 가문이 권력을 장악하여 국정을 좌우하는 정치 체제로, 정국의 안정과 왕권에 영향을 미칩니다."
+law_TFA_gwageo:0 "과거제"
+law_TFA_gwageo_desc:0 "과거제는 관리를 선발하는 시험 제도로, 능력 있는 인재를 등용하고 사회 계층 이동의 통로 역할을 합니다."
+law_TFA_gunyeok:0 "군역"
+law_TFA_gunyeok_desc:0 "남정에게 부과되는 군사적 의무로, 직접 군역에 복무하거나 군포를 납부하여 국방력을 유지합니다."
+law_TFA_samse:0 "삼세"
+law_TFA_samse_desc:0 "전세, 공부, 군포로 구성된 3대 조세 체계로, 토지, 가호, 신역을 기반으로 국가 재정을 운영합니다."
+law_TFA_sangso:0 "상소"
+law_TFA_sangso_desc:0 "신하가 왕에게 정책에 대한 의견이나 건의를 올리는 제도로, 정치적 소통과 견제의 수단이 됩니다."

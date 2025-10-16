@@ -1,0 +1,8 @@
+add_new_regime_progress_tt = {
+	global = TFA_ADD_NEW_REGIME_PROGRESS_EFFECT_POSITIVE
+	global_neg = TFA_ADD_NEW_REGIME_PROGRESS_EFFECT_NEGATIVE
+}
+add_old_regime_progress_tt = {
+	global = TFA_ADD_OLD_REGIME_PROGRESS_EFFECT_POSITIVE
+	global_neg = TFA_ADD_OLD_REGIME_PROGRESS_EFFECT_NEGATIVE
+}

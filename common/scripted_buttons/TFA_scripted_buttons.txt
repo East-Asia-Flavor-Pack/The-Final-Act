@@ -3,11 +3,11 @@
 	desc = "TFA_tutorial_button_desc"
 
 	visible = { 
-			NOT = { 
-					has_variable = TFA_tutorial_var 
-				} 
-			game_date < 1836.6.1
-		}
+		NOT = { 
+				has_variable = TFA_tutorial_var 
+			} 
+		game_date < 1836.6.1
+	}
 
 	possible = {
 	}
@@ -15,5 +15,132 @@
 	effect = {
 		trigger_event = { id = TFA_tutorial.1 popup = yes }
 		set_variable = TFA_tutorial_var 
+	}
+}
+
+TFA_bukbeol_start_button = {
+	name = "TFA_bukbeol_start_button"
+	desc = "TFA_bukbeol_start_button_desc"
+
+	visible = { 
+		has_variable = qing_opium_lost_var
+		NOT = { has_variable = TFA_bukbeol_start_button_var }
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		trigger_event = { id = TFA.10 popup = yes }
+		set_variable = TFA_bukbeol_start_button_var
+	}
+}
+
+TFA_delete_gunyeok_button = {
+	name = "TFA_delete_gunyeok_button"
+	desc = "TFA_delete_gunyeok_button_desc"
+
+	visible = { 
+		has_variable = qing_opium_lost_var
+		NOT = { has_variable = TFA_delete_gunyeok_button_var }
+		has_variable = TFA_bukbeol_start_event_var
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		trigger_event = { id = TFA.11 }
+		set_variable = TFA_delete_gunyeok_button_var
+	}
+}
+
+TFA_bukbeol_samjeondobi_button = {
+	name = "TFA_bukbeol_samjeondobi_button"
+	desc = "TFA_bukbeol_samjeondobi_button_desc"
+
+	visible = { 
+		has_variable = qing_opium_lost_var
+		NOT = {
+			has_variable = TFA_bukbeol_samjeondobi_button_var
+		}
+	}
+
+	possible = {
+		root = {
+			liberty_desire > 30
+			NOT = { has_law_or_variant = law_type:law_peasant_levies }
+		}
+	}
+
+	effect = {
+		trigger_event = { id = TFA.12 }
+		set_variable = TFA_bukbeol_samjeondobi_button_var
+	}
+}
+
+TFA_deny_jogong_button = {
+	name = "TFA_deny_jogong_button"
+	desc = "TFA_deny_jogong_button_desc"
+
+	visible = { 
+		has_variable = qing_opium_lost_var
+		NOT = {
+			has_variable = TFA_deny_jogong_button_var
+		}
+	}
+
+	possible = {
+		root = {
+			liberty_desire > 30
+			NOT = { has_law_or_variant = law_type:law_peasant_levies }
+		}
+	}
+
+	effect = {
+		trigger_event = { id = TFA.13 }
+		set_variable = TFA_deny_jogong_button_var
+	}
+}
+
+TFA_start_dokrip_war_button = {
+	name = "TFA_start_dokrip_war_button"
+	desc = "TFA_start_dokrip_war_button_desc"
+
+	visible = { 
+		NOT = {
+			has_variable = TFA_start_dokrip_war_button_var
+		}
+		has_variable = qing_opium_lost_var
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = TFA_bukbeol_progressbar_above_100_tt
+			je:je_TFA_bukbeol = {
+				"scripted_bar_progress(TFA_bukbeol_progress_bar)" >= 100
+			}
+		}
+	}
+
+	effect = {
+		set_variable = TFA_start_dokrip_war_button_var
+
+		create_diplomatic_play = {
+			target_country = c:CHI
+			type = dp_independence
+			add_war_goal = { holder = c:CHI target_country = ROOT type = reduce_autonomy }
+			escalation = 90
+			set_key = TFA_bukbeo_loc
+		}
+
+		c:CHI = {
+			add_modifier = {
+				name = TFA_gisup_modi
+				months = 6
+			}
+		}
 	}
 }

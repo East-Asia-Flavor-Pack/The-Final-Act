@@ -26,9 +26,148 @@ TFA_minran_progress_bar = {
 	name = "TFA_minran_progress_bar"
 	desc = "TFA_minran_progress_bar_desc"
 
-	default_red = yes
+	default = yes
 
 	start_value = 50
+	min_value = 0
+	max_value = 100
+
+}
+
+TFA_bukbeol_progress_bar = {
+	name = "TFA_bukbeol_progress_bar"
+	desc = "TFA_bukbeol_progress_bar_desc"
+
+	default = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				c:CHI ={
+					relations:root >= relations_threshold:neutral
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_over_neutral_tt"
+				value = -1
+			}
+		}
+		if = {
+			limit = {
+				c:CHI ={
+					relations:root >= relations_threshold:cordial
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_over_cordial_tt"
+				value = -2
+			}
+		}
+		if = {
+			limit = {
+				c:CHI ={
+					relations:root >= relations_threshold:amicable
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_over_amicable_tt"
+				value = -3
+			}
+		}
+		if = {
+			limit = {
+				c:CHI ={
+					relations:root >= relations_threshold:friendly
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_over_friendly_tt"
+				value = -5
+			}
+		}
+		if = {
+			limit = {
+				c:CHI ={
+					relations:root < relations_threshold:neutral
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_under_neutral_tt"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				c:CHI ={
+					relations:root < relations_threshold:poor
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_under_poor_tt"
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				c:KOR ={
+					liberty_desire > 65
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_liberty_desire_tt"
+				value = 3
+			}
+		}
+		if = {
+			limit = {
+				c:KOR = {
+					has_law_or_variant = law_type:law_peasant_levies
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_gunyeok_tt"
+				value = -1
+			}
+		}
+		if = {
+			limit = {
+				c:KOR = {
+					NOT = { has_law_or_variant = law_type:law_peasant_levies }
+				}
+			}
+			add = {
+				desc = "TFA_bukbeol_no_gunyeok_tt"
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				any_interest_group = {
+					law_stance = {
+						law = law_type:law_peasant_levies
+						value <=  disapprove
+					}
+				}
+			}
+			add = {
+				desc = "TFA_gunyeok_interest_groups_opposing"
+				every_interest_group = {
+					limit = {
+						law_stance = {
+							law = law_type:law_peasant_levies
+							value <= disapprove
+						}
+					}
+					add = this.ig_clout
+				}
+				multiply = 10
+			}
+		}
+	}
+
+
+
+	start_value = 0
 	min_value = 0
 	max_value = 100
 

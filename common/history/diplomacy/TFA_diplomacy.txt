@@ -1,0 +1,5 @@
+DIPLOMACY = {
+	c:KOR = {
+		add_liberty_desire = -24
+	}
+}

@@ -7,7 +7,10 @@ add_new_regime_progress = {
 			add_progress = { value = $VALUE$ name = TFA_new_regime_progress_bar }
 		}
 	}
-	custom_tooltip = add_new_regime_progress_tt
+	custom_description = {
+		text = add_new_regime_progress_tt
+		value = $VALUE$
+	}
 }
 
 add_old_regime_progress = {
@@ -19,5 +22,8 @@ add_old_regime_progress = {
 			add_progress = { value = $VALUE$ name = TFA_old_regime_progress_bar }
 		}
 	}
-	custom_tooltip = add_old_regime_progress_tt
+	custom_description = {
+		text = add_old_regime_progress_tt
+		value = $VALUE$
+	}
 }

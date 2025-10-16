@@ -1,0 +1,127 @@
+﻿TFA_armed_forces_sway_old_regime = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/character_invite"
+
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_bonapartist.dds"
+
+	potential = {
+		owner ?= scope:actor
+		owner ?= {
+			has_journal_entry = je_TFA_bukbeol
+			has_variable = TFA_gunyeok_char_interaction_var
+		}
+		is_ruler = no
+		is_heir = no
+		NOT = { has_ideology = ideology:ideology_jingoist }
+		interest_group = {
+			is_interest_group_type = ig_armed_forces
+		}
+	}
+
+	show_requirements = yes
+
+	possible = {
+		OR = {
+			interest_group = {
+				is_in_government = yes
+				is_insurrectionary = no
+			}
+		}
+		custom_tooltip = {
+			text = old_regime_20_tt
+			owner = {
+				je:je_TFA_scoreboard ?= {
+					"scripted_bar_progress(TFA_old_regime_progress_bar)" >= 20
+				}
+			}
+		}
+		
+		owner ?={
+			NOT = {
+				has_variable = TFA_sway_interaction_var
+			}
+		}
+	}
+
+	effect = {
+		set_ideology = ideology:ideology_jingoist
+		owner ?={
+			add_liberty_desire = 15
+			add_old_regime_progress = { VALUE = -20 }
+		}
+		set_variable = {
+			name = TFA_sway_interaction_var
+			months = 36
+		}
+	}
+
+	cooldown = { months = 36 }
+	show_confirmation_box = yes
+
+	ai_chance = {
+		value = 1
+	}
+}
+
+
+TFA_armed_forces_sway_new_regime = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/character_invite"
+
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_bonapartist.dds"
+
+	potential = {
+		owner ?= scope:actor
+		owner ?= {
+			has_journal_entry = je_TFA_bukbeol
+			has_variable = TFA_gunyeok_char_interaction_var
+		}
+		is_ruler = no
+		is_heir = no
+		NOT = { has_ideology = ideology:ideology_jingoist }
+		interest_group = {
+			is_interest_group_type = ig_armed_forces
+		}
+	}
+
+	show_requirements = yes
+
+	possible = {
+		OR = {
+			interest_group = {
+				is_in_government = yes
+				is_insurrectionary = no
+			}
+		}
+		custom_tooltip = {
+			text = new_regime_20_tt
+			owner = {
+				je:je_TFA_scoreboard ?= {
+					"scripted_bar_progress(TFA_new_regime_progress_bar)" >= 20
+				}
+			}
+		}
+		owner ?={
+			NOT = {
+				has_variable = TFA_sway_interaction_var
+			}
+		}
+	}
+
+	effect = {
+		set_ideology = ideology:ideology_jingoist
+		owner ?={
+			add_liberty_desire = 15
+			add_new_regime_progress = { VALUE = -20 }
+		}
+		set_variable = {
+			name = TFA_sway_interaction_var
+			months = 36
+		}
+	}
+
+	cooldown = { months = 36 }
+	show_confirmation_box = yes
+
+	ai_chance = {
+		value = 1
+	}
+}

@@ -34,3 +34,31 @@ scoreboard_je_reason_custom_loc = {
 		localization_key = scoreboard_desc_default
 	}
 }
+
+
+
+
+bukbeol_je_title_custom_loc = {
+	type = country
+	text = {
+		trigger = {
+			has_variable = qing_opium_lost_var
+		}
+		localization_key = bukbeol_title_new
+	}
+	text = {
+		localization_key = bukbeol_title_default
+	}
+}
+bukbeol_je_reason_custom_loc = {
+	type = country
+	text = {
+		trigger = {
+				has_variable = qing_opium_lost_var
+		}
+		localization_key = bukbeol_desc_new
+	}
+	text = {
+		localization_key = bukbeol_desc_default
+	}
+}
