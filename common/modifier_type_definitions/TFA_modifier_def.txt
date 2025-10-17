@@ -1,0 +1,10 @@
+country_institution_bibyeonsa_max_investment_add = {
+	decimals=0
+	color=good
+}
+
+country_institution_cost_institution_bibyeonsa_mult = {
+	decimals=0
+	percent=yes
+	color=bad
+}

@@ -126,7 +126,7 @@ TFA_bukbeol_progress_bar = {
 			}
 			add = {
 				desc = "TFA_bukbeol_gunyeok_tt"
-				value = -1
+				value = -5
 			}
 		}
 		if = {

@@ -91,25 +91,25 @@ TFA_bukbeol_progressbar_above_100_tt:0 "북벌에 대한 논의가 그 끝에 �
 TFA_bukbeol_progress_bar:0 "북벌"
 TFA_bukbeol_progress_bar_desc:0 "북벌에 대한 열망"
 
-TFA_bukbeol_over_neutral_tt:0 "청과의 관계가 $relations_neutral$이상에서"
+TFA_bukbeol_over_neutral_tt:0 "청과의 관계가 $relations_neutral$ 이상"
 
-TFA_bukbeol_over_cordial_tt:0 "청과의 관계가 $relations_cordial$이상에서"
+TFA_bukbeol_over_cordial_tt:0 "청과의 관계가 $relations_cordial$ 이상"
 
-TFA_bukbeol_over_amicable_tt:0 "청과의 관계가 $relations_amicable$이상에서"
+TFA_bukbeol_over_amicable_tt:0 "청과의 관계가 $relations_amicable$ 이상"
 
-TFA_bukbeol_over_friendly_tt:0 "청과의 관계가 $relations_friendly$이상에서"
+TFA_bukbeol_over_friendly_tt:0 "청과의 관계가 $relations_friendly$ 이상"
 
-TFA_bukbeol_under_neutral_tt:0 "청과의 관계가 $relations_neutral$미만에서"
+TFA_bukbeol_under_neutral_tt:0 "청과의 관계가 $relations_neutral$ 미만"
 
-TFA_bukbeol_under_poor_tt:0 "청과의 관계가 $relations_poor$미만에서"
+TFA_bukbeol_under_poor_tt:0 "청과의 관계가 $relations_poor$ 미만"
 
-TFA_bukbeol_liberty_desire_tt:0 "[concept_liberty_desire]이 65이상에 도달함에서"
+TFA_bukbeol_liberty_desire_tt:0 "[concept_liberty_desire]이 65이상에 도달함"
 
-TFA_bukbeol_gunyeok_tt:0 "후진적인 모병제도에서"
+TFA_bukbeol_gunyeok_tt:0 "후진적인 모병제도"
 
-TFA_bukbeol_no_gunyeok_tt:0 "선진적인 모병제도에서"
+TFA_bukbeol_no_gunyeok_tt:0 "선진적인 모병제도"
 
-TFA_gunyeok_interest_groups_opposing:0 "북벌에 열정적인 군인들의 [concept_clout]에서"
+TFA_gunyeok_interest_groups_opposing:0 "북벌에 열정적인 군인들의 [concept_clout]"
 
 TFA_armed_forces_sway_old_regime:0 "북벌 지지 요구"
 TFA_armed_forces_sway_old_regime_desc:0 "대신에게 북벌을 지지할것을 공개적으로 요구한다."

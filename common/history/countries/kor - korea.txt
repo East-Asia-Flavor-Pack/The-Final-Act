@@ -10,13 +10,14 @@
 		activate_law = law_type:law_TFA_sedo
 		activate_law = law_type:law_tenant_farmers
 		activate_law = law_type:law_TFA_samse
-		activate_law = law_type:law_TFA_gwageo
+		activate_law = law_type:law_TFA_corrupted_gwageo
 		activate_law = law_type:law_subjecthood
 		activate_law = law_type:law_traditionalism
-		activate_law = law_type:law_isolationism
+		activate_law = law_type:law_TFA_jogong
 		activate_law = law_type:law_TFA_sangso
 		activate_law = law_type:law_TFA_hyanggyo
 		activate_law = law_type:law_TFA_gunyeok
+		activate_law = law_type:law_TFA_nobi
 
 
 		set_tax_level = very_high
@@ -31,6 +32,16 @@
 			type = je_TFA_bukbeol
 		}
 		
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 2
+		}
+
+		set_institution_investment_level = {
+			institution = institution_bibyeonsa 
+			level = 5
+		}
+
 		ig:ig_landowners ?= { 
 			add_ruling_interest_group = yes
 		}
