@@ -1,0 +1,34 @@
+je_TFA_sedo = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	group = je_group_TFA
+
+	immediate = {
+		
+	}
+
+	complete = {
+		NOT = { has_law_or_variant = law_type:law_peasant_levies }
+		NOT = { has_law = law_type:law_TFA_samse }
+		NOT = { has_law = law_type:law_TFA_corrupted_gwageo }
+		institution_investment_level = {
+			institution = institution_bibyeonsa
+			value = 1
+		}
+		custom_tooltip = {
+			text = heonjong_chinjeong_tt
+			game_date >= 1841.2.1
+		}
+	}
+
+	on_complete = {
+		ig:ig_landowners ?= {
+			leader = {
+				add_trait = compliant
+			}
+		}
+	}
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

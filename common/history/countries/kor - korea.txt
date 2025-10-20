@@ -19,9 +19,6 @@
 		activate_law = law_type:law_TFA_gunyeok
 		activate_law = law_type:law_TFA_nobi
 
-
-		set_tax_level = very_high
-		
 		add_journal_entry = { type = je_TFA_scoreboard }
 
 		add_journal_entry = {
@@ -30,6 +27,10 @@
 		
 		add_journal_entry = {
 			type = je_TFA_bukbeol
+		}
+
+		add_journal_entry = {
+			type = je_TFA_sedo
 		}
 		
 		set_institution_investment_level = {

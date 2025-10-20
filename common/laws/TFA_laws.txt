@@ -17,12 +17,12 @@
 		state_conversion_mult = 0.33
 		state_education_access_add = 0.075
 		interest_group_ig_devout_pol_str_mult = 0.2
+		state_lower_strata_standard_of_living_add = -1.2
 	}
 
 	modifier = {
 		country_institution_cost_institution_schools_mult = -0.6
 		state_tax_capacity_mult = -0.1
-		state_lower_strata_standard_of_living_add = -2
 		country_institution_schools_max_investment_add = 1
 	}
 
@@ -42,10 +42,6 @@ law_TFA_sedo = {
 
 	institution = institution_bibyeonsa
 
-	disallowing_laws = {
-		law_autocracy 
-		law_landed_voting
-	}
 
 	is_visible = {
 		c:KOR = this
